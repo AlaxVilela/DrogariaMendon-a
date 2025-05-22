@@ -1,0 +1,81 @@
+/* Geral */
+body {
+  font-family: Arial, sans-serif;
+  scroll-behavior: smooth;
+}
+
+h1 {
+  margin-bottom: 1rem;
+  color: #007bff;
+}
+
+section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+/* Navbar */
+.navbar {
+  background-color: #f8f9fa;
+}
+
+.navbar-brand img {
+  max-height: 50px;
+}
+
+.navbar-nav .nav-link {
+  margin-right: 20px;
+  color: #333;
+  position: relative;
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px; /* Altura da barra */
+  background-color: #007bff;
+  transition: width 0.3s ease; /* Transição para o efeito da barra */
+}
+/* Efeito de hover */
+.nav-link:hover {
+  color: #007bff; /* Muda a cor do texto ao passar o mouse */
+}
+
+.nav-link:hover::after {
+  width: 100%; /* A barra cresce até o tamanho total do link */
+}
+
+.navbar-nav .nav-link:hover {
+  color: #007bff;
+}
+
+/* Carrossel */
+.carousel-inner img {
+  border-radius: 10px;
+}
+/*Sobre*/
+/* Rodapé */
+footer {
+  background-color: #f8f9fa;
+  border-top: 1px solid #dee2e6;
+  padding-top: 40px;
+  padding-bottom: 20px;
+}
+
+footer h1 {
+  font-size: 1.5rem;
+  color: #007bff;
+}
+
+.social-icons i {
+  font-size: 2rem;
+  color: #007bff;
+  margin: 0 15px;
+  transition: transform 0.2s ease;
+}
+
+.social-icons i:hover {
+  transform: scale(1.2);
+  color: #0056b3;
+}
