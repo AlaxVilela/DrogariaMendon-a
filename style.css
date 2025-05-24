@@ -2,20 +2,29 @@
 body {
   font-family: Arial, sans-serif;
   scroll-behavior: smooth;
+  background-color: #f0f4ff;
+  color: #001f3f;
 }
 
 h1 {
   margin-bottom: 1rem;
-  color: #007bff;
+  color: #cce0ff;
+   text-shadow: 1px 1px 2px #001f3f; /* Acessibilidade extra */ /* Maior contraste para acessibilidade */
 }
 
 section {
   padding-top: 60px;
   padding-bottom: 60px;
 }
+
 /* Navbar */
 .navbar {
-  background-color: #f8f9fa;
+  background-color: #001f3f;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  text-shadow: 1px 1px 2px #001f3f;
 }
 
 .navbar-brand img {
@@ -24,58 +33,95 @@ section {
 
 .navbar-nav .nav-link {
   margin-right: 20px;
-  color: #333;
+  padding: 10px 0; /* Mais fácil de clicar em dispositivos móveis */
+  color: white;
   position: relative;
 }
+
 .nav-link::after {
   content: '';
   position: absolute;
   bottom: 0;
   left: 0;
   width: 0;
-  height: 2px; /* Altura da barra */
-  background-color: #007bff;
-  transition: width 0.3s ease; /* Transição para o efeito da barra */
-}
-/* Efeito de hover */
-.nav-link:hover {
-  color: #007bff; /* Muda a cor do texto ao passar o mouse */
+  height: 2px;
+  background-color: #cce0ff;
+  transition: width 0.7s ease;
 }
 
 .nav-link:hover::after {
-  width: 100%; /* A barra cresce até o tamanho total do link */
+  width: 100%;
 }
 
 .navbar-nav .nav-link:hover {
-  color: #007bff;
+  color: #f0f4ff;
 }
 
 /* Carrossel */
 .carousel-inner img {
   border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease; /* Animação suave ao passar o mouse */
 }
-/*Sobre*/
+
+.carousel-inner img:hover {
+  transform: scale(1.02);
+}
+
 /* Rodapé */
 footer {
-  background-color: #f8f9fa;
-  border-top: 1px solid #dee2e6;
-  padding-top: 40px;
-  padding-bottom: 20px;
+  background-color: #001f3f; 
+  padding: 40px 20px;
+  color: #cce0ff;
+  text-align: center;
 }
 
 footer h1 {
   font-size: 1.5rem;
-  color: #007bff;
+  margin-bottom: 1.5rem;
 }
 
-.social-icons i {
+footer p {
+  color: #cce0ff;
+}
+
+/* Ícones sociais com efeito visual */
+.social-ring {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-size: 2rem;
-  color: #007bff;
-  margin: 0 15px;
-  transition: transform 0.2s ease;
+  color: #fff;
+  background-color: transparent;
+  border-radius: 50%;
+  border: 2px solid currentColor;
+  transition: all 0.4s ease;
+  overflow: hidden;
 }
 
-.social-icons i:hover {
-  transform: scale(1.2);
-  color: #0056b3;
+.social-ring::before {
+  content: '';
+  position: absolute;
+  background-color: transparent;
+  width: 100%;
+  height: 0;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+  transition: height 0.6s ease;
+  border-radius: 50%;
+}
+
+.social-ring:hover::before {
+  height: 100%;
+  background-color: white;
+}
+
+.social-ring:hover {
+  color: #001f3f;
+  transform: rotate(5deg); /* Efeito extra ao passar o mouse */
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.7); /*brilho ao redor*/
 }
