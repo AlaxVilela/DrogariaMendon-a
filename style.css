@@ -24,16 +24,20 @@ section {
   width: 100%;
   top: 0;
   z-index: 1000;
-  text-shadow: 1px 1px 2px #001f3f;
+  text-shadow: 1px 1px 2px #f6f8fa;
 }
 
 .navbar-brand img {
   max-height: 50px;
+
+}
+.imagem-arredondada{
+    border-radius: 10px; 
 }
 
 .navbar-nav .nav-link {
   margin-right: 20px;
-  padding: 10px 0; /* Mais fácil de clicar em dispositivos móveis */
+  padding: 10px 0; 
   color: white;
   position: relative;
 }
@@ -123,5 +127,5 @@ footer p {
 .social-ring:hover {
   color: #001f3f;
   transform: rotate(5deg); /* Efeito extra ao passar o mouse */
-  box-shadow: 0 0 12px rgba(255, 255, 255, 0.7); /*brilho ao redor*/
+  /*box-shadow: 0 0 12px rgba(255, 255, 255, 0.7); brilho ao redor*/
 }
